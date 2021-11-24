@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>call和apply方法</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function fun(a,b){
+        console.log(a)
+        console.log(b)
+      }
+      var obj = {};
+      // call和apply都是函数方法，需要通过函数对象来调用
+      /*
+      call（）方法可以将实参在对象之后依次传递
+      apply()方法需要将实参封装到一个数组中统一传递
+        */
+      fun.call(obj,2,3);
+      fun.apply(obj,[2,3])
+      // fun()
+    </script>
+  </body>
+</html>

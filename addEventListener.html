@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>你好</h1>
+	<button id="btn">点击</button>
+
+	<script type="text/javascript">
+		// window.addEventListener('load',doSometing,false)
+		var Btn=document.getElementById('btn')
+		// Btn.onclick=function(){
+		// 	console.log(this.id)
+		// }
+		Btn.addEventListener('click',function(e){
+			console.log(this.id)
+		},false);
+	</script>
+</body>
+</html>

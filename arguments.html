@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /*
+      * 封装实参对象arguments
+            arguments是一个类数组对象，它也可以通过索引来操作数据，也可以获取长度
+            在调用函数时，我们所传递的实参都会在argument中保存
+            argument.length可以用来获取实参的长度
+      */
+      function fun(){
+        console.log(arguments[1])
+      }
+      fun("hello",true)
+    </script>
+  </body>
+</html>

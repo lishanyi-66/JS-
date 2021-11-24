@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /*
+      表示一个时间
+      */
+      var d = new Date()
+      console.log(d)
+
+      /*
+      getTime()
+      获取当前日期对象的时间戳
+      时间戳，指的是从格林威治标准时间1970年1月1日，0时0分0秒
+      到当前日期所花费的毫秒数（1）
+      */
+      var time = d.getTime()
+      console.log(time/1000/60/60/24/365)
+    </script>
+  </body>
+</html>

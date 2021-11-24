@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// var Vehicle = function (){
+		// 	this.price=1000;
+
+		// };
+		// var v=new Vehicle();
+		// console.log(v.price)
+
+
+		// var Vehicle=function(p){
+		// 	this.price=p
+
+		// };
+		// var v=new Vehicle(500)
+		// console.log(v.price)
+
+		// 如果return 语句返回的是一个跟this无关的新对象，New 命令会返回这个新对象，而不是this对象
+
+		var Vehicle=function(){
+			this.price=1000;
+			return {price:100}
+		}
+		var v=new Vehicle()
+		console.log(v.price)
+
+		// new命令总是返回一个对象，要么实例对象，要么是return 语句指定的对象。
+
+	</script>
+</body>
+</html>
