@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var btn = document.getElementById('btn');
+			// btn.addEventListener('click',function(){
+			// 	console.log(1)
+			// },false)
+			function bind(obj,eventStr,callback){
+				if(obj.addEventListener){
+					// 大部分的浏览器
+					obj.addEventListener(eventStr,callback,false) //这里的eventStr不需要加引号
+				}else{
+					// IE8以下
+					obj.attachEvent("on"+eventStr,function(){callback.call(obj)})  //浏览器调用没打修改，可以使用匿名函数来修改，
+				}
+			}
+			bind(btn,'click',function(){console.log(1)})
+		}
+	</script>
+</head>
+<body>
+	<button id="btn">点我一下</button>
+</body>
+</html>

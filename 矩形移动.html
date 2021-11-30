@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>矩形移动</title>
+	<style type="text/css">
+		#box{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+
+
+		}
+		#btn{
+			margin-top: 150px;
+		}
+	</style>
+	<script type="text/javascript" src="tools.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var box = document.getElementById("box");
+			var btn = document.getElementById("btn");
+			// console.log(box)
+			// console.log(btn)
+			// 获取box 的left 
+			// var newValue = getStyle(box,"left");
+			// console.log(newValue)
+			btn.onclick = function(){
+				move(box,"left",800,20);
+			};
+		}
+	</script>
+</head>
+<body>
+	<div id="box"></div>
+	<br></br>
+	<button id="btn">按钮</button>
+</body>
+</html>

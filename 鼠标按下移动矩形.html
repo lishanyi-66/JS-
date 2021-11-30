@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>矩形移动</title>
+	<style type="text/css">
+		#box{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var box = document.getElementById('box')
+			// 鼠标按下
+			box.onmousedown=function(e){
+				var e = e||window.e;
+				var sl=e.clientX-box.offsetLeft;  //鼠标的点击坐标减去元素的偏移距离
+				var st=e.clientY-box.offsetTop;
+				// 鼠标点击坐标
+				// 鼠标拖动
+				document.onmousemove=function(e){
+					var e=e||window.e;
+					var left= e.clientX-sl;
+					var top = e.clientY-st;
+					// console.log(left)
+					box.style.left = left+'px';
+					box.style.top = top+"px";
+				}
+				// 鼠标抬起
+				document.onmouseup=function(){
+					document.onmousemove=null;
+					document.onmouseup=null;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>
